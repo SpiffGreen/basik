@@ -1,0 +1,254 @@
+{
+    "info": {
+        "_postman_id": "11631f30-7b9d-450a-ab34-31773673de4b",
+        "name": "Basik",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "Auth",
+            "item": [
+                {
+                    "name": "Register",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:8080/auth/register",
+                            "path": [
+                                "auth",
+                                "register"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"email\": \"carlosbane48@gmail.com\",\n  \"name\": \"Carlos Green\",\n  \"password\": \"pass123\",\n  \"tenantId\": 1\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Login",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:8080/auth/login",
+                            "path": [
+                                "auth",
+                                "login"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"email\": \"spiffjekeygreen@gmail.com\",\n  \"password\": \"pass123\",\n  \"tenantId\": 1\n}"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Tenants",
+            "item": [
+                {
+                    "name": "Create tenant",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:8080/tenants",
+                            "path": [
+                                "tenants"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"name\": \"Jessy\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "List Tenants",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8080/tenants",
+                            "path": [
+                                "tenants"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        },
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNwaWZmamVrZXlncmVlbkBnbWFpbC5jb20iLCJleHAiOjE3NDE1MjQ3MjgsInJvbGUiOiJhZG1pbiIsInN1YiI6IjEiLCJ0ZW5hbnRfaWQiOiIxIn0.TvD0jz39qZTW1lfPsB_81NgfE5rqKMHzIy_YUEoQ6qA"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Tasks",
+            "item": [
+                {
+                    "name": "Get tasks",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8080/tasks",
+                            "path": [
+                                "tasks"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        },
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhcmxvc2JhbmU0OEBnbWFpbC5jb20iLCJleHAiOjE3NDE1MjQ0MzIsInJvbGUiOiJ1c2VyIiwic3ViIjoiMiIsInRlbmFudF9pZCI6IjEifQ.VnYRbxHL_nKjpEA_y5QwiPuAMMLUFuZVFh2QgElgTsk"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Create task",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:8080/tasks",
+                            "path": [
+                                "tasks"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        },
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNwaWZmamVrZXlncmVlbkBnbWFpbC5jb20iLCJleHAiOjE3NDE1MjQ3MjgsInJvbGUiOiJhZG1pbiIsInN1YiI6IjEiLCJ0ZW5hbnRfaWQiOiIxIn0.TvD0jz39qZTW1lfPsB_81NgfE5rqKMHzIy_YUEoQ6qA"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"title\": \"First task\",\n  \"status\": \"Pending\",\n  \"tenant_id\": 1\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Edit task",
+                    "request": {
+                        "method": "PUT",
+                        "url": {
+                            "raw": "http://localhost:8080/tasks/:id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "1"
+                                }
+                            ],
+                            "path": [
+                                "tasks",
+                                ":id"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        },
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNwaWZmamVrZXlncmVlbkBnbWFpbC5jb20iLCJleHAiOjE3NDE1MjUzMTgsInJvbGUiOiJhZG1pbiIsInN1YiI6IjEiLCJ0ZW5hbnRfaWQiOiIxIn0.uI8IqtqrSiJJU5HbqYZg5haduFt-Tc7wkdWZ3NwjRjE"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"title\": \"Updated task\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Delete task",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://localhost:8080/tasks/:id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "1"
+                                }
+                            ],
+                            "path": [
+                                "tasks",
+                                ":id"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        },
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNwaWZmamVrZXlncmVlbkBnbWFpbC5jb20iLCJleHAiOjE3NDE1MjUzMTgsInJvbGUiOiJhZG1pbiIsInN1YiI6IjEiLCJ0ZW5hbnRfaWQiOiIxIn0.uI8IqtqrSiJJU5HbqYZg5haduFt-Tc7wkdWZ3NwjRjE"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
